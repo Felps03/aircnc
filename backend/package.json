@@ -4,7 +4,7 @@
   "description": "Air Code and Coffee. Application where companies can make their space available for other developers to work on, creating a connection environment that can add both to the developer and to the company that discovers new talents to compose its team.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest __tests__/",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.2",
     "multer": "^1.4.2"

@@ -16,6 +16,7 @@
       "camelcase": "off",
       "global-require": "off",
       "max-len": ["error", { "code": 120 }],
-      "no-return-await": "off"
+      "no-return-await": "off",
+      "func-names": 0
     }
 }
