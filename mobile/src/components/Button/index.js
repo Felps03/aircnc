@@ -2,10 +2,23 @@ import React from 'react';
 
 import {Container, Text} from './styles';
 
-const Button = ({label, ...rest}) => {
+const Button = ({
+  label,
+  height,
+  marginTop,
+  borderRadius,
+  fontSize,
+  backgroundColor,
+  ...rest
+}) => {
   return (
-    <Container {...rest}>
-      <Text>{label}</Text>
+    <Container
+      height={height}
+      marginTop={marginTop}
+      borderRadius={borderRadius}
+      backgroundColor={backgroundColor}
+      {...rest}>
+      <Text fontSize={fontSize}>{label}</Text>
     </Container>
   );
 };

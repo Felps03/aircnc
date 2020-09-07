@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {Image, Platform} from 'react-native';
-import api from '../../services/api';
-
 import AsyncStorage from '@react-native-community/async-storage';
 
-import {Container, Form} from './styles';
+import api from '../../services/api';
+
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 import logo from '../../assets/logo.png';
 
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+import {Container, Form} from './styles';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -26,34 +26,34 @@ const Login = ({navigation}) => {
       .then(getTech);
 
     const getEmail = () => {
-      return AsyncStorage.getItem('email').then((email) => {
-        if (email) {
-          setEmail(email);
+      return AsyncStorage.getItem('email').then((Email) => {
+        if (Email) {
+          setEmail(Email);
         }
       });
     };
 
     const getTech = () => {
-      return AsyncStorage.getItem('techs').then((techs) => {
-        if (techs) {
-          setTechs(techs);
+      return AsyncStorage.getItem('techs').then((Techs) => {
+        if (Techs) {
+          setTechs(Techs);
         }
       });
     };
   }, [navigation]);
 
   const handleSubmit = async () => {
-    console.log(email, techs);
-    // const response = await api.post('/sessions', {
-    //   email,
-    // });
+    const response = await api.post('/sessions', {
+      email,
+    });
 
-    // const {_id} = response.data;
+    const {_id} = response.data;
 
-    // await AsyncStorage.setItem('user', _id);
-    // await AsyncStorage.setItem('email', email);
+    await AsyncStorage.setItem('user', _id);
+    await AsyncStorage.setItem('email', email);
+    await AsyncStorage.setItem('techs', techs);
 
-    // navigation.navigate('List');
+    navigation.navigate('List');
   };
 
   return (

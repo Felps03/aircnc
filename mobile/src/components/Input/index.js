@@ -2,10 +2,10 @@ import React from 'react';
 
 import {Label, TextInput} from './styles';
 
-const Input = ({label, ...rest}) => {
+const Input = ({label, marginTop, ...rest}) => {
   return (
     <>
-      <Label>{label}</Label>
+      <Label marginTop={marginTop}>{label}</Label>
       <TextInput {...rest} />
     </>
   );

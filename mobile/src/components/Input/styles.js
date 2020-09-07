@@ -5,6 +5,7 @@ export const Label = styled.Text`
   color: #444;
   margin-bottom: 8px;
   text-transform: uppercase;
+  margin-top: ${(props) => (props.marginTop ? `${props.marginTop}px` : '0px')};
 `;
 
 export const TextInput = styled.TextInput.attrs({
