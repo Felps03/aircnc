@@ -10,6 +10,10 @@ module.exports = {
       user = await UserRepository.create({ email });
     }
 
+    console.log('==================');
+    console.log(user);
+    console.log('==================');
+
     return res.json(user);
   },
 };
