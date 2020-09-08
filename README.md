@@ -26,4 +26,4 @@ O Aircnc é um projeto que visa conectar empresas que querem abrir spots e desen
 
 ## 🔖 Layout
 
-Você pode baixar o layout do projeto no formato `.sketch` através [desse link](.github/aircnc.sketch).
+Você pode baixar o layout do projeto no formato `.sketch` através [desse link](https://raw.githubusercontent.com/Felps03/aircnc/master/README.md).
