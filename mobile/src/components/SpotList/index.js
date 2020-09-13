@@ -52,7 +52,7 @@ const SpotList = ({tech, navigation}) => {
             <Price>{item.price ? `R$${item.price}/dia` : 'GRATUITO'}</Price>
             <Button
               onPress={() => handleNavigate(item._id)}
-              label={'Encontrar sptos'}
+              label={'Solicitar reserva'}
               height={32}
               marginTop={15}
               borderRadius={2}
